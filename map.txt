@@ -1,0 +1,37 @@
+For the third part of my lab I was going to create a roadmap of the classes and how they are going to interact. I did most of
+the work on paper and this is a write-up for it. I ended up spending much more time figuring out how to use github and
+downloading SDL, so I spent less time on this portion of the lab.
+
+Base Class: Lemonade Stand
+There will be a default and non-default constructor. The non-default will be used for interactive gameplay and defalut will be
+used for simulation. All of the derived classes will be using composition because a lemonade stand "has a" recipe/customer/etc.
+There will be get and set functions for many of the private variables. The main chunk of the base class will be the function
+that actually runs through the day. It will simulate a day of selling based on several variables. The newspaper class will be
+the key interaction here because it will create variation for all of the variables. The customer class will be used because
+there will be an array of customers. The function will reset variables based on the newspaper and then run through the array of
+customers and check if they would buy a cup of lemonade. Then it updates and tallys up the results. The inventory class will be
+used between simulation rounds.
+
+Customer Class:
+Ted wrote the .h file for the customer class. It is posted on GitHub. It has variables and functions that keep track of the
+customers wants. It is used in the base class in the simulation function as I stated before.
+
+Inventory Class:
+Jack wrote the .h file for the inventory class. The inventory class keeps track of how many lemons, cups, ice, sugar, and
+money. It also has a recipe. The user will be able to see the inventory and then make decisions to modify it between days.
+
+Newspaper Class:
+I wrote the .h file for the newspaper class. It will be crucial for creating variation. It is used in the simulation function
+as well. In the .cpp it will have a few different events that cause changes in the variables. The Newspaper class also keeps
+track of the weather. Originally I thought it would be a variable, but I think that it will actually be its own class so that
+it can be easily displayed and shared between the different classes.
+
+Weather Class:
+The weather will have a sunny/cloudy variable and a cold/warm variable. It will have a print function that prints it out as a
+string but it will also have get and set functions with integers so that the newspaper class can interact with it easily.
+
+Recipe Class:
+The recipe class will interact with the inventory class through composition. It will get user input values through the
+inventory class and generate results about how tasty a recipe is to a given customer. It will have a private member customer.
+
+
